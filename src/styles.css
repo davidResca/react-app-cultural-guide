@@ -5,9 +5,10 @@
 }
 
 .navbar{
+    padding: 2rem;
     height: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: pink;
     box-shadow: 2px 2px 5px rgba(0,0,0,.3);
@@ -17,13 +18,20 @@
     text-transform: capitalize;
 }
 
-.navbar__link{
+.navbar__links{
+    column-gap: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.navbar__links--link{
     text-decoration: underline;
     color: black;
     font-size: 1.2rem;
     text-transform: capitalize;
 }
 
-.navbar__link:hover{
+.navbar__links--link:hover{
     color: white;
 }

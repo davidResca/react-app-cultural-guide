@@ -3,7 +3,10 @@ import Navbar from './Navbar';
 
 const Header = () => {
     return (
-    <Navbar />
+    <nav className="navbar">
+        <h1 className="navbar__title">guia cultural</h1>
+        <Navbar />
+    </nav>
     )
 }
 
