@@ -1,16 +1,12 @@
-import Cardpromo from "./Cardpromo";
 import ItemListContainer from "./ItemListContainer";
+import CardPromoContainer from "./CardPromoContainer";
 
 const Main = () => {
     return (
-    <main>
-        <ItemListContainer saludo="Bienvenidx"/>
-        <Cardpromo />
-        <Cardpromo />
-        <Cardpromo />
-        <Cardpromo />
-
-    </main>
+        <main>
+            <ItemListContainer saludo="Bienvenido"/>
+            <CardPromoContainer />
+        </main>
     )
 }
 
