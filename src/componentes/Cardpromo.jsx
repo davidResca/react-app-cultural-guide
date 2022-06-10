@@ -1,10 +1,6 @@
-import image from './assets/flyer1.png';
+import image from './assets/fly2.png';
 
 const Cardpromo = () => {
-
-
-
-
 
     return (
         <div className="card">

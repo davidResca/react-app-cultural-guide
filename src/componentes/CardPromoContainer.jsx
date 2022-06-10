@@ -1,5 +1,6 @@
 import CardPromo from './Cardpromo';
 
+
 const CardPromoContainer = () => {
     return (
         <div className="card-promo-container">
@@ -11,4 +12,6 @@ const CardPromoContainer = () => {
     )
 }
 
+
 export default CardPromoContainer;
+
