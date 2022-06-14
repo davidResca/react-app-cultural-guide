@@ -1,13 +1,16 @@
-import Item from "./Item";
+import Item from './Item';
 
 const ItemList = ({productos}) => {
     return (
         productos.map(p =>
             <Item 
-            id={p.id}
-            name={p.name}
+            id={p.id} 
+            nombre={p.nombre} 
             img={p.img}
-            />)
+            stock ={p.stock}
+            key={p.id}
+            />
+        )
     )
 }
 

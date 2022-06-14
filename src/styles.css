@@ -221,3 +221,28 @@ body{
     text-align: center;
     color: white;
 }
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.prod-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prod-card{
+    border-radius: 16px;
+}
+
+.prod-img{
+    border-bottom-left-radius : 16px;
+    border-bottom-right-radius : 16px;
+    width: 250px;
+}
+
+.prod-name{
+    font-size: 1rem;
+}

@@ -2,7 +2,7 @@ import ItemListContainer from "./ItemListContainer";
 import CardPromoContainer from "./CardPromoContainer";
 import CardDisciplineContainer from "./CardDisciplineContainer";
 import MainGreetings from "./MainGreetings";
-import ItemList from "./ItemList";
+
 
 
 const Main = () => {
@@ -12,7 +12,6 @@ const Main = () => {
             <MainGreetings />
             <CardPromoContainer />
             <CardDisciplineContainer />
-            {/* <ItemList /> */}
         </main>
     )
 }

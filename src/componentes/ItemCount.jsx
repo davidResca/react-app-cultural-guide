@@ -3,10 +3,9 @@ import swal from 'sweetalert2';
 
 const ItemCount = (props) => {
 
-    const {stock, initial} = props;
-
-    const [contador, setContador] = useState(initial)
-
+    const {stock, initial, onAdd} = props;
+    const [contador, setContador] = useState(initial);
+    
     const aumentarContador = () =>{
         if(contador < stock){
             setContador(contador + 1);
@@ -42,7 +41,6 @@ const ItemCount = (props) => {
             })  
         }
     }
-    
 
     return(
         <div className="contador">
@@ -50,7 +48,6 @@ const ItemCount = (props) => {
             <span className="counter">{contador}</span>
             <button className="btn-cont" onClick={aumentarContador}>+</button>
             <button className="btn-confirm" onClick={confirmarContador}>Confirmar</button>
-
         </div>
     )
 }
