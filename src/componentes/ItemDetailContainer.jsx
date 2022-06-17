@@ -14,7 +14,8 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <ItemDetail />
+            <h1 className="detail-title">ITEM DETAIL</h1>
+            <ItemDetail item = {item} />
         </div>
     )
 }

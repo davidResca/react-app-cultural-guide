@@ -18,7 +18,7 @@ const ItemListContainer = (props) => {
             <div className="contador-container">
                 <h2 className="greeting">{props.saludo}, esto es un contador hecho con React:</h2>
             </div>
-            <div className="container">
+            <div className="catalog-container">
                 <ItemList productos={items}/>
             </div>
         </div>

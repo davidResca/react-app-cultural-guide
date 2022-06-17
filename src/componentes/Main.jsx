@@ -9,7 +9,7 @@ import ItemDetailContainer from "./ItemDetailContainer";
 const Main = () => {
     return (
         <main className="main">
-            {/* <ItemListContainer saludo="Bienvenidx"/> */}
+            <ItemListContainer saludo="Bienvenidx"/>
             <ItemDetailContainer />
             <MainGreetings />
             <CardPromoContainer />
