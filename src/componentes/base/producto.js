@@ -4,6 +4,7 @@ const producto = {
     nombre: "Getjide", 
     autor: "Unordered List", 
     precio: 1.3,
+    descripcion: "Obra de arte NFT del artista digital Unordered List, Siglo XXI",
     stock: 5
 }
 

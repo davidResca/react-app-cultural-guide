@@ -9,6 +9,7 @@ const ItemDetail = ({item}) => {
             <h2 className='detail-title'>{item.autor}</h2>
             <img className='detail-img' src={item.img} alt={item.nombre} />
             <strong className='detail-img'>Precio: {item.precio} ETH</strong>
+            <p className='detail-desc'>Descripcion:{item.descripcion}</p>
             <ItemCount stock={item.stock} initial={1} onAdd={()=>{}}/>
         </div>
     )
