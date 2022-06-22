@@ -1,14 +1,14 @@
 import CartWidget from './CartWidget';
-import HeaderAsideMenu from './HeaderAsideMenu';
-import HamBtn from './HamBtn';
+import HamIcon from "./HamIcon";
+import HeaderSidebar from './HeaderSidebar';
 
 const Header = () => {
     return (
-        <nav className="navbar">
-            <HamBtn />
-            <HeaderAsideMenu />
+        <header className='header'>
+            <HamIcon />
+            <HeaderSidebar />
             <CartWidget />
-        </nav>
+        </header>
     )
 }
 

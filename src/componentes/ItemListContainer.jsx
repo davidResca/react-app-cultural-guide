@@ -1,26 +1,33 @@
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
-import fetchProductos from "./base/fetch";
-import productos from "./base/productData";
+import { fetchProductos, getProductoByCategory } from "./base/fetch";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = (props) => {
-    const [items, setItems] = useState([]);
+const ItemListContainer = () => {
+    const [ items, setItems ] = useState([]);
+    
+    const { categoryId } = useParams();
 
     useEffect(() => {
-        fetchProductos(3000, productos)
-        .then(r => setItems(r))
-    }, [items])
+        if(!categoryId){
+            fetchProductos()
+            .then(response => {
+                setItems(response);
+            })
+        } else {
+            getProductoByCategory(categoryId)
+            .then(response => {
+                setItems(response);
+            })
+        }
+    }, [categoryId])
 
-    console.log(items);
     
     return (
-        <div>
-            <div className="contador-container">
-                <h2 className="greeting">{props.saludo}, esto es un contador hecho con React:</h2>
-            </div>
-            <div className="catalog-container">
-                <ItemList productos={items}/>
-            </div>
+        <div className="catalog-container">
+            {
+                items?.length <= 0 ? <p className="loader">buscando productos...</p> : <ItemList productos = { items }/>
+            }
         </div>
     )
 }

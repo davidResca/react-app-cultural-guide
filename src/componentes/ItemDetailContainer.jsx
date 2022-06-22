@@ -1,21 +1,27 @@
 import { useEffect, useState } from "react";
-import fetchProductos from "./base/fetch";
+import { useParams } from "react-router-dom";
+import { getProductoById } from "./base/fetch";
 import ItemDetail from './ItemDetail';
-import producto from "./base/producto";
+
 
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState({});
+    const [producto, setProducto] = useState({});
     
+    const {id} = useParams();
+
     useEffect(()=>{
-        fetchProductos(2000, producto)
-            .then(r => setItem(r));
-        },[item]);
+        getProductoById(parseInt(id))
+        .then(response => {
+            setProducto(response)
+        });
+    },[id]);
 
     return (
         <div>
-            <h1 className="detail-title">ITEM DETAIL</h1>
-            <ItemDetail item = {item} />
+            {
+                producto?.length <= 0 ? <p>Cargando Item...</p> : <ItemDetail {...producto} />
+            }
         </div>
     )
 }

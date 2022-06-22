@@ -1,15 +1,13 @@
-import image from './assets/fly2.png';
-
-const Cardpromo = () => {
-
+const Cardpromo = ({img, titulo, descripcion}) => {
     return (
         <div className="card">
+
             <div className="card-title">
-                <p>Lorem ipsum dolor sit amet</p>
+                <p>{titulo}</p>
             </div>
-            <img className="card-img" src={image} alt="flyer" />
+            <img className="card-img" src={img} alt={titulo} />
             <div className="card-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam distinctio assumenda dolor hic possimus magni tempora optio architecto velit rerum eius?</p>
+                <p>{descripcion}</p>
             </div>
         </div>
     )

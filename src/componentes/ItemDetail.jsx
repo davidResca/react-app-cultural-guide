@@ -1,16 +1,20 @@
 import ItemCount from './ItemCount';
 
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
 
     return (
-        <div  className="detail-container">
-            <h1 className='detail-title'>{item.nombre}</h1>
-            <h2 className='detail-title'>{item.autor}</h2>
-            <img className='detail-img' src={item.img} alt={item.nombre} />
-            <strong className='detail-img'>Precio: {item.precio} ETH</strong>
-            <p className='detail-desc'>Descripcion:{item.descripcion}</p>
-            <ItemCount stock={item.stock} initial={1} onAdd={()=>{}}/>
+        <div className="detail-container">
+            <div className='detail-left-column'>
+                <img className='detail-img' src={img} alt={nombre} />
+            </div>
+            <div className='detail-right-column'>
+                <h1 className='detail-title'>{nombre}</h1>
+                <h2 className='detail-title'>{autor}</h2>
+                <p className='detail-desc'>{descripcion}</p>
+                <strong className='detail-price'>Precio: ${precio}</strong>
+                <ItemCount stock={stock} initial={1}/>
+            </div>
         </div>
     )
 }

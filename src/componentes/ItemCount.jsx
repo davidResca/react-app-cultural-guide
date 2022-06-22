@@ -3,7 +3,7 @@ import swal from 'sweetalert2';
 
 const ItemCount = (props) => {
 
-    const {stock, initial, onAdd} = props;
+    const {stock, initial} = props;
     const [contador, setContador] = useState(initial);
     
     const aumentarContador = () =>{
@@ -16,13 +16,11 @@ const ItemCount = (props) => {
             })
         }
     }
-
     const disminuirContador = ()=>{
         if(contador >= 1){
             setContador(contador - 1);
         }
     }
-
     const confirmarContador = ()=>{
         if(contador === 1){
             swal.fire({
