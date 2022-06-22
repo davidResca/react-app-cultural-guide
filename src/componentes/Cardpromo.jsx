@@ -1,7 +1,6 @@
 const Cardpromo = ({img, titulo, descripcion}) => {
     return (
         <div className="card">
-
             <div className="card-title">
                 <p>{titulo}</p>
             </div>

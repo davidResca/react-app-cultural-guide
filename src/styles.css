@@ -374,3 +374,14 @@ body{
     color: rgb(70, 67, 67);
     margin-top: 200px;
 }
+
+.loader-item{
+    margin-left: 11rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    font-style: italic;
+    color: rgb(70, 67, 67);
+    margin-top: 200px;
+}

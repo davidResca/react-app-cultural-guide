@@ -29,6 +29,6 @@ export const getNewsData = () => {
     return new Promise ((ful) => {
         setTimeout(()=> {
             ful(newsData);
-        }, 2000);
+        }, 1000);
     })
 }

@@ -4,7 +4,7 @@ import { getNewsData } from './base/fetch';
 
 const CardPromoContainer = () => {
     
-    const [ flyer, setFlyer ] = useState({});
+    const [ flyer, setFlyer ] = useState([]);
 
     useEffect(()=>{
         getNewsData()
