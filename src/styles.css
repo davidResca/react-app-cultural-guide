@@ -64,6 +64,7 @@ body{
 
     transform: translateX(0%);
 }
+
 .sidebar_open{
     z-index: 9;
     position: absolute;
@@ -124,9 +125,6 @@ body{
     color: black;
 }
 
-
-
-
 .main{
     display: flex;
     flex-direction: column;
@@ -135,8 +133,36 @@ body{
     padding: 1rem;
 }
 
-.main-article{
-    font-size: 1rem;
+.MainCardsContainer{
+    display: flex;
+    margin-left: 11rem;
+    justify-content: space-evenly;
+}
+
+.main-title-container{
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-title{
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.main-subtitle{
+    font-size: 3rem;
+}
+
+.main-subtitle-color{
+    color: rgb(54, 52, 52);
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.main-description{
+    text-transform: capitalize;
+    color:green;
+    font-weight: 500;
+    font-size: 2rem;
 }
 
 
@@ -146,8 +172,6 @@ body{
     height: 100%;
     display: flex;
     gap: 1rem;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
 }
 
 .card{
@@ -156,6 +180,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 300px;
+    height: 387px;
 }
 .card-title{
     display: flex;
@@ -186,8 +211,8 @@ body{
     position: absolute;
     bottom: 0;
     color: black;
-    /* border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px; */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .CardDisciplineContainer{
