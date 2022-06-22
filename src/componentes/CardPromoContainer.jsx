@@ -16,7 +16,9 @@ const CardPromoContainer = () => {
 
     return (
         <div className="card-promo-container">
-            <CardPromo {...flyer} />
+            {
+                flyer?.length < 0 ? <p>Cargando...</p> : <CardPromo {...flyer} />
+            }
         </div>
     )
 }
