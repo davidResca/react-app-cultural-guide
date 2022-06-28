@@ -12,12 +12,19 @@ de los diversos eventos culturales gestados en la ciudad y que promuevan la
 oferta artística de la misma.
 
 
+Ideas principales: 
+
+-Crear Main mostrando nuevos eventos en la vista principal
+con noticias sobre los últimos hechos artísticos promocionados.
+
+-Crear eshop para la compra de entradas a eventos filtrando por disciplina (Musica, teatro).
+
 ## Proyecto realizado en React Js
 
 Dependencias utilizadas:
 
-React-router-dom
-SweetAlert2
+React-router-dom => Ruteos y Links internos de la aplicación.
+SweetAlert2 => Notificaciones de stock y agregar productos al carro.
 
 
 
