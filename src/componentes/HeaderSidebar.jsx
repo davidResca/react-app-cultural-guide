@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const HeaderSidebar = () => {
 
     return (
         <nav className='sidebar'>
-            <Link to='/' className='navbar_link'>inicio</Link>
-            <Link to='/products/' className='navbar_link'>tickets</Link>
-            <Link to='/category/recitales' className='navbar_link'>recitales</Link>
-            <Link to='/category/teatro' className='navbar_link'>teatro</Link>
+            <NavLink to='/' className='navbar_link'>inicio</NavLink>
+            <NavLink to='/products/' className='navbar_link'>tickets</NavLink>
+            <NavLink to='/category/recitales' className='navbar_link'>recitales</NavLink>
+            <NavLink to='/category/teatro' className='navbar_link'>teatro</NavLink>
+            <NavLink to='/category/carrito' className='navbar_link'>carrito</NavLink>
         </nav>
     )
 }

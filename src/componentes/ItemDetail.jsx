@@ -3,6 +3,8 @@ import ItemCount from './ItemCount';
 
 const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
 
+    const onAdd = () =>{}
+
     return (
         <div className="detail-container">
             <div className='detail-left-column'>
@@ -13,7 +15,7 @@ const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
                 <h2 className='detail-title'>{autor}</h2>
                 <p className='detail-desc'>{descripcion}</p>
                 <strong className='detail-price'>Precio: ${precio}</strong>
-                <ItemCount stock={stock} initial={1}/>
+                <ItemCount stock={stock} initial={1} onAdd={onAdd} />
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import CardPromoContainer from "./CardPromoContainer";
 
 const MainCardsContainer = () => {
     return (
-        <divn className="MainCardsContainer">
+        <div className="MainCardsContainer">
             <div className="main-title-container">
             <h1 className="main-title">bienvenidx</h1>
             <p className="main-subtitle">Esto es una guía</p>
@@ -13,7 +13,7 @@ const MainCardsContainer = () => {
             <div className="cards-container">
                 <CardPromoContainer />
             </div>
-        </divn>
+        </div>
     )
 }
 
