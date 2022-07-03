@@ -1,9 +1,15 @@
 import ItemCount from './ItemCount';
-
+import CartWidget from './CartWidget';
+import { useState } from 'react';
 
 const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
+    const [ itemsCart, setItemsCart ] = useState(false);
 
-    const onAdd = () =>{}
+    const onAdd = (cantidadProductos) => {
+        /* console.log(cantidad) */
+        setItemsCart(cantidadProductos);
+    }
+
 
     return (
         <div className="detail-container">
@@ -15,7 +21,16 @@ const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
                 <h2 className='detail-title'>{autor}</h2>
                 <p className='detail-desc'>{descripcion}</p>
                 <strong className='detail-price'>Precio: ${precio}</strong>
-                <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+                { 
+                    itemsCart > 0 ? 
+                        <CartWidget/>
+                        : 
+                        <ItemCount 
+                            stock={stock} 
+                            initial={1} 
+                            onAdd={onAdd} 
+                    /> 
+                }
             </div>
         </div>
     )

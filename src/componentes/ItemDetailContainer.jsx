@@ -12,12 +12,12 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-        isLoading = true;
+        setLoading(true);
 
         getProductoById(parseInt(id))
         .then(response => {
             setProducto(response)
-            isLoading = false;
+            setLoading(false);
         });
     },[id]);
 

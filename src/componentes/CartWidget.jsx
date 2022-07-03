@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
+
 const CartWidget = () => {
     return (
         <div>
-            <span className="material-symbols-outlined cart-widget">shopping_cart</span>
+            <Link to='/carrito'><span className="material-symbols-outlined cart-widget">shopping_cart</span></Link>
         </div>
     )
 }

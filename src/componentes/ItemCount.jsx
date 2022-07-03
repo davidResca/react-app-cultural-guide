@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import swal from 'sweetalert2';
 
-const ItemCount = (props) => {
 
-    const {stock, initial} = props;
+const ItemCount = ({stock, initial, onAdd}) => {
+
     const [contador, setContador] = useState(initial);
     
     const aumentarContador = () =>{
@@ -21,7 +21,11 @@ const ItemCount = (props) => {
             setContador(contador - 1);
         }
     }
-    const confirmarContador = ()=>{
+
+    const confirmarContador = (e)=>{
+
+        onAdd(contador);
+
         if(contador === 1){
             swal.fire({
                 text: 'Se ha agregado: ' + contador + ' producto a su carro',
