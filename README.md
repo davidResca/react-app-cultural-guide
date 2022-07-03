@@ -1,32 +1,38 @@
+<<<<<<< HEAD
 <!-- # Getting Started with Create React App
+=======
+# App Guía con e-commerce de tickets para eventos culturales.
+>>>>>>> 6ccba24930353144ea4498d128e25bc21903799e
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto tiene como objetivo constituirse como un valor en la ciudad
+de La Plata, difundiendo y promoviendo actividades culturales de diferentes
+disciplinas, ofreciendo publicidad, entradas y descuentos para eventos y 
+productos de consumo en sitios donde se desarrollen estas actividades.
 
-## Available Scripts
+Buscamos aportar un incentivo más al desarrollo cultural de la ciudad de las 
+diagonales a partir de considerar que existe una necesidad imperante en la
+comunicación ante la escasez de soportes digitales que unifiquen la información
+de los diversos eventos culturales gestados en la ciudad y que promuevan la 
+oferta artística de la misma.
 
-In the project directory, you can run:
 
-### `npm start`
+Ideas principales: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-Crear Main mostrando nuevos eventos en la vista principal
+con noticias sobre los últimos hechos artísticos promocionados.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-Crear eshop para la compra de entradas a eventos filtrando por disciplina (Musica, teatro).
 
-### `npm test`
+## Proyecto realizado en React Js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dependencias utilizadas:
 
-### `npm run build`
+React-router-dom => Ruteos y Links internos de la aplicación.
+SweetAlert2 => Notificaciones de stock y agregar productos al carro.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
+<<<<<<< HEAD
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
@@ -69,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
  -->
+=======
+>>>>>>> 6ccba24930353144ea4498d128e25bc21903799e
