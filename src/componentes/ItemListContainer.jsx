@@ -12,7 +12,7 @@ const ItemListContainer = () => {
 
         setLoading(true);
 
-        if(!categoryId){
+        if(!categoryId){ 
             fetchProductos()
             .then(response => {
                 setItems(response);

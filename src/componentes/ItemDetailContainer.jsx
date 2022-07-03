@@ -7,20 +7,24 @@ import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([]);
+    const [isLoading, setLoading] = useState(true);
     
     const {id} = useParams();
 
     useEffect(()=>{
+        isLoading = true;
+
         getProductoById(parseInt(id))
         .then(response => {
             setProducto(response)
+            isLoading = false;
         });
     },[id]);
 
     return (
         <div>
             {
-                producto?.length <= 0 ? <p className="loader-item">Cargando Item...</p> : <ItemDetail {...producto} />
+                isLoading ? <p className="loader-item">Cargando Item...</p> : <ItemDetail {...producto} />
             }
         </div>
     )
