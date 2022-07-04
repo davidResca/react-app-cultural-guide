@@ -23,7 +23,7 @@ const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
                 <strong className='detail-price'>Precio: ${precio}</strong>
                 { 
                     itemsCart > 0 ? 
-                        <CartWidget/>
+                        <p>Ver carrito<CartWidget/></p>
                         : 
                         <ItemCount 
                             stock={stock} 
