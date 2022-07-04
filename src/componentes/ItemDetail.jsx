@@ -1,6 +1,8 @@
 import ItemCount from './ItemCount';
 import CartWidget from './CartWidget';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
     const [ itemsCart, setItemsCart ] = useState(false);
@@ -23,7 +25,7 @@ const ItemDetail = ({nombre, autor, precio, descripcion, img, stock}) => {
                 <strong className='detail-price'>Precio: ${precio}</strong>
                 { 
                     itemsCart > 0 ? 
-                        <p>Ver carrito<CartWidget/></p>
+                        <Link to="/carrito" className='detail-price'>Ver carrito</Link>
                         : 
                         <ItemCount 
                             stock={stock} 
