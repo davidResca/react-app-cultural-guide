@@ -1,14 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './componentes/Header';
 import Main from './componentes/Main';
-
+import { BrowserRouter } from 'react-router-dom';
+import { CartContext } from './componentes/CartContext';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Main />
+      <CartContext>
+        <Header />
+        <Main />
+      </CartContext>
     </BrowserRouter>
   );
 }
