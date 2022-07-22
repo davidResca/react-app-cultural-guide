@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './componentes/Header';
 import Main from './componentes/Main';
 import { BrowserRouter } from 'react-router-dom';
-import { CartContext } from './componentes/CartContext';
+import { CartContext } from './context/CartContext';
 
 function App() {
   return (
