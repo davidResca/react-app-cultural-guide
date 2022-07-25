@@ -70,7 +70,6 @@ function Checkout() {
                 <div className='form-input'>
                     <input onChange={handleChange}  placeholder="confirmar email..." type="email" id="confirmar_email" value={usuario["confirmar_email"]}/>
                 </div>
-                <button>comprar</button>
             </form>
             { 
             usuario.nombre && usuario.apellido && usuario.tel && usuario.email && usuario["confirmar_email"] && (usuario.email === usuario["confirmar_email"])
