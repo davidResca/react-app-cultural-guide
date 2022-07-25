@@ -1,14 +1,14 @@
-import React from 'react'
-import Form from './Form';
+import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react'
 import { contexto } from "../context/CartContext"
-import { Link } from 'react-router-dom';
 import { db } from "../firebase/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import Form from './Form';
 
 function Checkout() {
-    const { carrito, precioTotal, vaciarCarrito, eliminarProducto } = useContext(contexto)
-    const [ idCompra, setIdCompra ] = useState("")
+    const { carrito, precioTotal, vaciarCarrito } = useContext(contexto);
+    const [ ordenId, setOrdenId ] = useState("");
+    const [ loading, setLoading ] = useState(true);
     const [usuario, setUsuario] = useState({
         nombre: "",
         apellido: "",
@@ -17,8 +17,7 @@ function Checkout() {
         confirmar_email: "",
     });
 
-    const { nombre, apellido, tel, email, confirmar_email } = usuario;
-
+    const { nombre, apellido, tel, email } = usuario;
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -30,6 +29,7 @@ function Checkout() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
         const orden = {
             buyer: {
                 nombre: nombre,
@@ -46,22 +46,22 @@ function Checkout() {
         
         addDoc(ref, orden)
         .then((response) => {
-            console.log(response)
-        });
-
+            setOrdenId(response.id);
+            vaciarCarrito();
+        })
+        .finally(setLoading(false));
     }
 
-    /* if (idCompra !== '') {
-        return (
-            <div className='checkout'>
-                <h2 >¡Muchas gracias por tu compra {(usuario.nombre)}!</h2>
-                <p>Te enviamos un mail a {(usuario.email)}</p>
-                <p> Con tu orden de compra ID: {idCompra}. </p> 
+    if(ordenId !==""){
+        return(
+        <div className='checkout'>
+                <h2>Muchas gracias por tu compra {(nombre)}!</h2>
+                <p>Te llegará un mail a {(email)}</p>
                 <p> ¡Hasta la próxima!</p>
                 <Link to='/'><button>volver al inicio</button></Link>
             </div>
         )
-    } */
+    }
     return (
         <div className='checkout'>
             <h2>Complete con sus datos para finalizar la compra</h2>
