@@ -24,7 +24,8 @@ Ideas principales:
 * react-dom: v18.1
 * firebase: v9.9.1 - Base de Datos
 * SweetAlert2: v11.4.17 - Notificaciones
-* CSS Puro - Estilos
+* CSS (Puro)- Estilos
+
 
 ## Uso e instalación
 
