@@ -54,12 +54,19 @@ function Checkout() {
         <div className='checkout'>
                 <h2>Muchas gracias por tu compra {(nombre)}!</h2>
                 <p>Te llegará un mail a {(email)}</p>
+                <p>con el ID {(ordenId)}</p>
                 <p> ¡Hasta la próxima!</p>
                 <Link to='/'><button>volver al inicio</button></Link>
             </div>
         )
     }
     return (
+        carrito.length < 1 ? 
+        <div className="cart-empty-modal">
+            <p>No tienes ningún producto en el carrito, deseas comprar algo? </p>
+            <Link to ="/products">Ver Productos</Link>
+        </div>  
+        :
         <div className='checkout'>
             <h2>Complete con sus datos para finalizar la compra</h2>
             < Form 
