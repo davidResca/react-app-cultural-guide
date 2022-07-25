@@ -489,3 +489,8 @@ body{
     font-family: 'Roboto Mono', monospace;
     font-weight: 800;
 }
+
+.checkout{
+    font-size: 2rem;
+    margin-left: 16rem;
+}

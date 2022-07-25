@@ -11,13 +11,11 @@ export const CartContext = ({children}) => {
     const cartCopy = [...carrito];
     
     const  agregarProducto = (producto, cantidad) => {
-        
         const nuevoProducto = {
             ...producto, 
             cantidad : cantidad,
         } 
-
-        if (isInCart(producto.id)){
+        if (verificarEnCarrito(producto.id)){
             cartCopy.forEach((producto) => {
                 if (nuevoProducto.id === producto.id) {
                     producto.cantidad += cantidad;
@@ -26,7 +24,6 @@ export const CartContext = ({children}) => {
         } else {
             cartCopy.push({...nuevoProducto});
         }
-        
         setCarrito(cartCopy);
         //actualiza cantidadTotal
         const cantTotal = actualizarCantidadTotal;
@@ -40,7 +37,7 @@ export const CartContext = ({children}) => {
         console.log(carrito) */
     }
     
-    const isInCart = id => carrito.some(producto => producto.id === id);
+    const verificarEnCarrito = id => carrito.some(producto => producto.id === id);
     const eliminarProducto = id => setCarrito (carrito.filter((producto) => (producto.id !== id)))
     const actualizarCantidadTotal = () => cartCopy.reduce((acc, producto)=> acc += producto.cantidad, 0);
     const calcularPrecioTotal = () => cartCopy.reduce((acc, producto)=> acc += producto.precio * producto.cantidad, 0);
@@ -50,6 +47,7 @@ export const CartContext = ({children}) => {
         setCantidadTotal(0);
         setPrecioTotal(0);
     }
+
     const valorDelContexto = {
         carrito : carrito,
         cantidadTotal : cantidadTotal,
