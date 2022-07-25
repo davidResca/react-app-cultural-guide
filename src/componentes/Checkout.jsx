@@ -8,7 +8,6 @@ import Form from './Form';
 function Checkout() {
     const { carrito, precioTotal, vaciarCarrito } = useContext(contexto);
     const [ ordenId, setOrdenId ] = useState("");
-    const [ loading, setLoading ] = useState(true);
     const [usuario, setUsuario] = useState({
         nombre: "",
         apellido: "",
@@ -29,7 +28,6 @@ function Checkout() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setLoading(true);
         const orden = {
             buyer: {
                 nombre: nombre,
@@ -49,7 +47,6 @@ function Checkout() {
             setOrdenId(response.id);
             vaciarCarrito();
         })
-        .finally(setLoading(false));
     }
 
     if(ordenId !==""){
